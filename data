@@ -1,0 +1,112 @@
+DEFAULT SETTINGS:
+
+16 workers, 0.03 mutation rate, 3 clones
+
+var generation;
+var best;
+var jumps;
+var paused = false;
+var workerCount = 4;
+var generationSize = 100;
+var individualSizes = [18, 27, 9, 1];
+var mutationRate = 0.03;
+var clonesPerGeneration = 3;
+var workers = [];
+
+
+
+DATA:
+
+[18, 27, 9, 1]:
+
+   High score: 144, age 2: id 73
+
+   Score 68, age 0: id 84 from generation 0
+   Score 75, age 0: id 10 from generation 4
+   Score 76, age 0: id 66 from generation 11
+   Score 82, age 0: id 96 from generation 12
+   Score 65, age 1: id 42 from generation 15
+   Score 87, age 1: id 88 from generation 17
+   Score 97, age 1: id 98 from generation 18
+   Score 107, age 1: id 81 from generation 20
+   Score 94, age 2: id 50 from generation 21
+   Score 102, age 2: id 44 from generation 23
+   Score 112, age 2: id 48 from generation 25
+   Score 127, age 2: id 65 from generation 26
+   Score 130, age 2: id 45 from generation 76
+   Score 133, age 2: id 21 from generation 79
+   Score 134, age 2: id 7 from generation 84
+   Score 135, age 2: id 50 from generation 238
+   Score 139, age 2: id 92 from generation 241
+   Score 140, age 2: id 39 from generation 261
+   Score 142, age 2: id 12 from generation 263
+   Score 144, age 2: id 67 from generation 285
+
+
+[18, 9, 9, 1]:
+
+   High score: 118, age 0: id 54
+
+   Score 14, age 0: id 27 from generation 0
+   Score 31, age 0: id 42 from generation 41
+   Score 68, age 0: id 37 from generation 43
+   Score 69, age 0: id 27 from generation 44
+   Score 75, age 0: id 61 from generation 46
+   Score 76, age 0: id 10 from generation 49
+   Score 79, age 0: id 90 from generation 2501
+   Score 93, age 0: id 45 from generation 2503
+   Score 94, age 0: id 19 from generation 2508
+   Score 95, age 0: id 52 from generation 2511
+   Score 98, age 0: id 62 from generation 3084
+   Score 100, age 0: id 78 from generation 8668
+   Score 102, age 0: id 17 from generation 8669
+   Score 105, age 0: id 64 from generation 8670
+   Score 107, age 0: id 44 from generation 8723
+   Score 109, age 0: id 77 from generation 8727
+   Score 110, age 0: id 52 from generation 8785
+   Score 112, age 0: id 99 from generation 8865
+   Score 113, age 0: id 21 from generation 8867
+   Score 114, age 0: id 57 from generation 8880
+   Score 116, age 0: id 6 from generation 8881
+   Score 118, age 0: id 95 from generation 8929
+
+
+[18, 27, 1]:
+
+   High score: 137, age 2: id 76
+
+   Score 14, age 0: id 56 from generation 0
+   Score 68, age 0: id 80 from generation 1
+   Score 76, age 0: id 48 from generation 6
+   Score 77, age 0: id 51 from generation 85
+   Score 78, age 0: id 43 from generation 89
+   Score 84, age 0: id 38 from generation 804
+   Score 119, age 2: id 76 from generation 805
+   Score 127, age 2: id 73 from generation 808
+   Score 129, age 2: id 51 from generation 809
+   Score 131, age 2: id 91 from generation 810
+   Score 136, age 2: id 4 from generation 1038
+   Score 137, age 2: id 18 from generation 1052
+
+
+[18, 9, 1]:
+
+   High score: 143, age 2: id 43
+
+   Score 97, age 1: id 27 from generation 0
+   Score 100, age 1: id 78 from generation 107
+   Score 106, age 1: id 83 from generation 108
+   Score 110, age 2: id 27 from generation 113
+   Score 123, age 2: id 78 from generation 114
+   Score 128, age 2: id 22 from generation 115
+   Score 130, age 2: id 3 from generation 118
+   Score 131, age 2: id 72 from generation 594
+   Score 136, age 2: id 98 from generation 596
+   Score 137, age 2: id 32 from generation 617
+   Score 140, age 2: id 53 from generation 625
+   Score 141, age 2: id 27 from generation 806
+   Score 142, age 2: id 21 from generation 831
+   Score 143, age 2: id 25 from generation 832
+
+
+[18, 18, 1]:

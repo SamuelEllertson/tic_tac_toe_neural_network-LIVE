@@ -23,12 +23,13 @@ var generation;
 var best;
 var jumps;
 var paused = false;
-var workerCount = 4;
+var workerCount = 16;
 var generationSize = 100;
-var individualSizes = [18, 27, 9, 1];
+var individualSizes = [18, 18, 1];
 var mutationRate = 0.03;
 var clonesPerGeneration = 3;
 var workers = [];
+var MAX_GENERTION = 10000;
 
 // TODO: use seedrandom? <https://github.com/davidbau/seedrandom>
 
@@ -186,6 +187,11 @@ $(function () {
     }
 
     function run() {
+        if(generation.id >= MAX_GENERTION){
+            console.log("complete");
+            setPaused(true);
+        }
+
         if (paused) {
             return;
         }
